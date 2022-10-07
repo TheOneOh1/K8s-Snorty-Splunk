@@ -9,42 +9,41 @@ We will be protecting the AWS Cluster with SNORT IDS and extracting the IDS logs
 
 ### TECH USED
 
-**- AWS**
-**- Kubernetes**
-**- SNORT**
-**- SPLUNK / SPLUNK Forwarder**
+-**AWS** </br>
+-**Kubernetes** </br>
+-**SNORT** </br>
+-**SPLUNK / SPLUNK Forwarder** </br>
 
 __________________________________________________
 
 ## K8s CONFIG
 
-- Installing Docker and Dependancies
+- Installing Docker and Dependancies </br>
 ``apt-get install ca-certificates curl gnupg lsb-release``
 
-- Add Docker’s official GPG key
-``mkdir -p /etc/apt/keyrings``
-
+- Add Docker’s official GPG key </br>
+``mkdir -p /etc/apt/keyrings`` </br>
 ``curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg``
 
-- set up the repository:
+- set up the repository: </br>
 ``echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null``
 
 
-- Install Docker Engine
-	``sudo apt-get update``
-
-	``sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin``
-
+- Install Docker Engine </br>
+``sudo apt-get update``
+``sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin``
 
 - Configure the Docker daemon, in particular to use systemd for the management of
-the container's cgroups
+the container's cgroups </br>
 ``mkdir /etc/docker``
 
-``cat <<EOF | sudo tee /etc/docker/daemon.json
-``{``
-``"exec-opts": ["native.cgroupdriver=systemd"]``
-``}``
-``EOF``
+```
+cat <<EOF | sudo tee /etc/docker/daemon.json
+{
+"exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
+```
 
 ``systemctl enable --now docker``
 
@@ -52,25 +51,28 @@ the container's cgroups
 
 ``systemctl restart docker``
 
-- Turn off swap space
+- Turn off swap space </br>
 ``swapoff -a``
 
 ``sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab``
 
-- When this is set to 1, bridged packets will traverse iptables rules. This is a requirement for Container Network Interface (CNI) plug-ins to work.
+- When this is set to 1, bridged packets will traverse iptables rules. This is a requirement for Container Network Interface (CNI) plug-ins to work. </br>
 ``sysctl net.bridge.bridge-nf-call-iptables=1``
 
-- Install kubectl, kubelet and kubeadm
-``apt-get update && sudo apt-get install -y apt-transport-https curl``
+- Install kubectl, kubelet and kubeadm </br>
+```
+apt-get update && sudo apt-get install -y apt-transport-https curl
 
-``curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg``
+curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
-``echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list``
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
-``apt update -y``
+apt update -y
 
-``apt install -y kubelet kubeadm kubectl``
+apt install -y kubelet kubeadm kubectl
 
-``rm /etc/containerd/config.toml``
+rm /etc/containerd/config.toml
 
-``systemctl restart containerd``
+systemctl restart containerd
+
+```
