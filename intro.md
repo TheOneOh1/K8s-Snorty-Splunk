@@ -30,30 +30,25 @@ __________________________________________________
 
 
 - Install Docker Engine </br>
-``sudo apt-get update``
+``sudo apt-get update`` </br>
 ``sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin``
 
 - Configure the Docker daemon, in particular to use systemd for the management of
 the container's cgroups </br>
-``mkdir /etc/docker``
-
+``mkdir /etc/docker``  </br>
 ```
 cat <<EOF | sudo tee /etc/docker/daemon.json
 {
 "exec-opts": ["native.cgroupdriver=systemd"]
 }
 EOF
-```
-
-``systemctl enable --now docker``
-
-``usermod -aG docker ubuntu``
-
-``systemctl restart docker``
+``` 
+``systemctl enable --now docker`` </br>
+``usermod -aG docker ubuntu`` </br>
+``systemctl restart docker``  </br>
 
 - Turn off swap space </br>
-``swapoff -a``
-
+``swapoff -a``  </br>
 ``sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab``
 
 - When this is set to 1, bridged packets will traverse iptables rules. This is a requirement for Container Network Interface (CNI) plug-ins to work. </br>
@@ -61,18 +56,18 @@ EOF
 
 - Install kubectl, kubelet and kubeadm </br>
 ```
-apt-get update && sudo apt-get install -y apt-transport-https curl
+> apt-get update && sudo apt-get install -y apt-transport-https curl
 
-curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+> curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
-echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+> echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
 
-apt update -y
+> apt update -y
 
-apt install -y kubelet kubeadm kubectl
+> apt install -y kubelet kubeadm kubectl
 
-rm /etc/containerd/config.toml
+> rm /etc/containerd/config.toml
 
-systemctl restart containerd
+> systemctl restart containerd
 
 ```
