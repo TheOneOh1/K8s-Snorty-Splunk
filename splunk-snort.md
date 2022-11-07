@@ -94,3 +94,5 @@ dynamicdetection directory /usr/local/lib/snort_dynamicrules
 ``snort -q -l /var/log/snort/ -i ens5 -A full -c /etc/snort/snort.conf``
 
 - Log file will be named as “alert” at /var/log/snort/
+
+![](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/alert_logs.PNG)
