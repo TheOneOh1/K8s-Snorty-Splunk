@@ -1,4 +1,4 @@
-### SPLUNK
+# SPLUNK
 
 - We are going to use SPLUNK AMI from AWS Marketplace.
 - The Splunk Enterprise AMI accelerates the speed at which organizations deploy Splunk Enterprise in AWS. 
@@ -34,13 +34,13 @@ Note :- You can access the Terminal of this Instance the same way for normal Ins
 
 ``yum install epel-release -y``
 
-**[Dependencies]**
+**[Dependencies]** </br>
 ``yum install flex bison gcc gcc-c++ make cmake autoconf libtool git nano unzip wget libpcap-devel pcre-devel libdnet-devel hwloc-devel openssl-devel zlib-devel luajit-devel pkgconfig libnfnetlink-devel libnetfilter_queue-devel libmnl-devel -y``
 
-**[Installing Snort]**
+**[Installing Snort]** </br>
 ``yum install https://forensics.cert.org/centos/cert/7/x86_64/snort-2.9.19-1.el7.x86_64.rpm``
 
-**[Installing DAQ Libraries]**
+**[Installing DAQ Libraries]** </br>
 ``yum install https://forensics.cert.org/centos/cert/7/x86_64/daq-2.0.7-10.1.el7.x86_64.rpm``
 
 
@@ -61,7 +61,7 @@ dynamicengine /usr/lib64/snort-2.9.19_dynamicengine/libsf_engine.so
 dynamicdetection directory /usr/local/lib/snort_dynamicrules
 
 ```
-**[Testing the .config file]**
+**[Testing the .config file]** </br>
 ``sudo snort -c /etc/snort/snort.conf -T``
 
 **Note** : If you face any error after testing, make sure to remove the Rules from  /etc/snort/snort.conf except for the local.rules
@@ -72,15 +72,15 @@ dynamicdetection directory /usr/local/lib/snort_dynamicrules
 1. /etc/snort/snort.conf 					---> SNORT main config file
 2. /var/log/snort/								---> Path where snort Logs are saved
 
-**[Check if snort Installed]**
+**[Check if snort Installed]** </br>
 ``snort -V``
 
-**[Adding demo ICMP rule]**
+**[Adding demo ICMP rule]** </br>
 ``sudo nano /etc/snort/rules/local.rules``
 
 *alert icmp any any -> any any ( msg:"ICMP Detected !!!";  sid:1000002; rev:1; )*
 
-**[Running Snort]**
+**[Running Snort]** </br>
 ``sudo -i ens5 -c /etc/snort/snort.conf -A console``
 
 	(-i)	-->	Interface
