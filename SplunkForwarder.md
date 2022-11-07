@@ -57,7 +57,7 @@ Save and exit nano
 
 ``sudo ./splunk restart``
 
-**NOW go to SPLUNK web portal http://<public-IP>:8000**
+**NOW go to SPLUNK web portal** *http://public-IP:8000*
 
 1. Click on Search and Reporting
 
