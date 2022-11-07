@@ -80,6 +80,8 @@ dynamicdetection directory /usr/local/lib/snort_dynamicrules
 
 *alert icmp any any -> any any ( msg:"ICMP Detected !!!";  sid:1000002; rev:1; )*
 
+![](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/rules.PNG)
+
 **[Running Snort]** </br>
 ``sudo -i ens5 -c /etc/snort/snort.conf -A console``
 
