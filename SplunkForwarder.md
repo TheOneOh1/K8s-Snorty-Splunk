@@ -59,8 +59,8 @@ Save and exit nano
 
 **NOW go to SPLUNK web portal** *http://public-IP:8000*
 
-1. Click on Search and Reporting
+1. Click on Search and Reporting.
 
-2. Click on Data Summary, under that you will the HOST that we added
+2. Click on Data Summary, under that you will the HOST that we added.
 
-3. Click on the Host you will the logs
+3. Click on the Host you will the logs.
