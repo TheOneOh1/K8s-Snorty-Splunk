@@ -9,10 +9,10 @@ We will be protecting the AWS Cluster with SNORT IDS and extracting the IDS logs
 
 ### TECH USED
 
--**AWS** </br>
--**Kubernetes** </br>
--**SNORT** </br>
--**SPLUNK / SPLUNK Forwarder** </br>
+- **AWS** </br>
+- **Kubernetes** </br>
+- **SNORT** </br>
+- **SPLUNK / SPLUNK Forwarder** </br>
 
 __________________________________________________
 
