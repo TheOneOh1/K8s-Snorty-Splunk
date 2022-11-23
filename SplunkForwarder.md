@@ -63,4 +63,10 @@ Save and exit nano
 
 2. Click on Data Summary, under that you will the HOST that we added.
 
-3. Click on the Host you will the logs.
+3. Click on the Host you will see the logs.
+
+![](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/splunk_dashboard.PNG)
+
+- We also used the **Snort Alert for Splunk** which shows the logs in formatted way
+
+![](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/snort_dashboard.PNG)
