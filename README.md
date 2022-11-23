@@ -24,15 +24,7 @@ ___________________________________________________
 
 <!--ts-->
 * [K8s CONFIG](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/k8s.md#k8s-config)
-* [Python Package Manager](#python-package-manager)
-* [requirements.txt](#requirementstxt)
-* [KeyWords](#keywords)
-* [Debugger](#debugger)
-* [Keys and Values](#keys-and-values)
-* [Importing Libraries in the Script](#importing-libraries-in-the-script)
-* [While Loop](#while-loop)
-* [For Loop](#for-loop)
-* [Functions](#functions)
-* [System Calls](#system-calls)
-* [Sub Process](#sub-process)
+* [SPLUNK FORWARDER](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/SplunkForwarder.md#splunk-forwarder)
+* [SPLUNK](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/splunk-snort.md#splunk)
+* [SNORT Config](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/splunk-snort.md#install-snort-on-this-machine)
 <!--te-->
