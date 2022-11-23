@@ -13,10 +13,11 @@ We will be protecting the AWS Cluster with SNORT IDS and extracting the IDS logs
 
 ### TECH USED
 
-- **AWS** </br>
-- **Kubernetes** </br>
-- **SNORT** </br>
-- **SPLUNK / SPLUNK Forwarder** </br>
+- **AWS** &nbsp; <a
+target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/1280px-Amazon_Web_Services_Logo.svg.png" alt="AWS" width="30" height="20"/> </a></br>
+- **KUBERNETES** &nbsp; <a target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="30" height="30"/> </a> </br>
+- **SNORT** &nbsp; <a target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/en/3/3a/Snort_ids_logo.png" alt="splunk" width="60" height="40"/> </a> </br>
+- **SPLUNK / SPLUNK Forwarder** <a target="_blank" rel="noreferrer"> <img src="https://www.splunk.com/content/dam/splunk2/images/2020-splunk-planet.svg" alt="splunk" width="35" height="35"/> </a></br>
 
 ___________________________________________________
 
