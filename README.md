@@ -25,7 +25,7 @@ ___________________________________________________
 
 <!--ts-->
 * [K8s CONFIG](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/k8s.md#k8s-config)
-* [SPLUNK FORWARDER](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/SplunkForwarder.md#splunk-forwarder)
 * [SPLUNK](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/splunk-snort.md#splunk)
 * [SNORT Config](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/splunk-snort.md#install-snort-on-this-machine)
+* [SPLUNK FORWARDER](https://github.com/TheOneOh1/K8s-Snorty-Splunk/blob/main/SplunkForwarder.md#splunk-forwarder)
 <!--te-->
