@@ -44,7 +44,7 @@ Note :- You can access the Terminal of this Instance the same way for normal Ins
 ``yum install https://forensics.cert.org/centos/cert/7/x86_64/daq-2.0.7-10.1.el7.x86_64.rpm``
 
 
-- We want to enable the dynamic rules, so for this purpose we will edit /etc/snort/snort.conf
+- We want to enable the dynamic rules, so for this purpose we will edit **/etc/snort/snort.conf**
 
 ``nano /etc/snort/snort.conf``
 
@@ -68,10 +68,10 @@ dynamicdetection directory /usr/local/lib/snort_dynamicrules
 
 
 ### Important Paths working with SNORT
-
-1. /etc/snort/snort.conf 					---> SNORT main config file
-2. /var/log/snort/								---> Path where snort Logs are saved
-
+```
+1. /etc/snort/snort.conf			---> SNORT main config file
+2. /var/log/snort/				---> Path where snort Logs are saved
+```
 **[Check if snort Installed]** </br>
 ``snort -V``
 
